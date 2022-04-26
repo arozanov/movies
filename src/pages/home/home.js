@@ -37,7 +37,7 @@ function Home() {
                 </div>
                 {!isLoading && <MoviesList movies={moviesList}/>}
             </div>
-            <Loader loading={isLoading}/>
+            <Loader loading={true}/>
 
         </div>
     );
