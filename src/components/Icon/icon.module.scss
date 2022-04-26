@@ -1,0 +1,17 @@
+.button {
+  background: transparent;
+  cursor:pointer;
+}
+
+
+.icon {
+  //position: absolute;
+  padding: 4px;
+  margin-left: auto;
+
+  &:hover, &.focus {
+    path {
+      fill: hsl(0, 100%, 0%);
+    }
+  }
+}

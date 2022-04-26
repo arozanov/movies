@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import "~@/styles/_mixins.scss";
+
+.movie {
+  display: flex;
+  border: 1px solid lightgrey;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.movie__image {
+  border-radius: 15px;
+  padding: 4px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+  width:220px;
+  height: 330px;
+  margin-top: 0;
+}
+
+.header__wrapper {
+  display: flex;
+}
+
+.movie__description {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.movie__title__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  font-family: 'Open Sans', sans-serif ;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.header__icons {
+  max-height: 24px;
+  flex-shrink: 0;
+  //position: absolute;
+}
+
+.movie__overview {
+  font-family: 'Open Sans', sans-serif ;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 1.2;
+  overflow: scroll;
+  max-height: 330px;
+}
+
+@media (max-width: $desktop-width + px) {
+  .movie__image {
+    @include adaptiv-value("width", 220, 320, 110, 1);
+    @include adaptiv-value("height", 330, 320, 165, 1);
+  }
+  .movie__overview {
+    @include adaptiv-value("max-height", 330, 320, 142, 1);
+
+  }
+}

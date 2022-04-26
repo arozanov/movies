@@ -1,0 +1,55 @@
+@import "~@/styles/_mixins.scss";
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search__form {
+  height: 40px;
+  width: 100%;
+  border: 1px solid grey;
+  border-radius: 4px;
+}
+
+.form {
+  height: 100%;
+  width: 100%;
+}
+
+.form__input {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.icon {
+  margin: 0 15px;
+}
+
+.input {
+  display: inline-block;
+  height: 100%;
+  border-radius: 6px;
+  flex-grow: 1;
+  font-size: 16px;
+  font-family: inherit;
+  &:focus-visible {
+    outline: none;
+  }
+  &::placeholder {
+    color: lightgrey;
+  }
+}
+
+@media (max-width: $desktop-width + px) {
+  .search__form {
+      @include adaptiv-value("height", 40, 320, 30, 1)
+  }
+  .input {
+    @include adaptiv-value("font-size", 16, 320, 12, 1)
+  }
+}
+

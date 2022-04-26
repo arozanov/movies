@@ -1,0 +1,70 @@
+@import "~@/styles/_mixins.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* RESET STYLES */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+html,
+body {
+    height: 100%;
+    line-height: 1;
+}
+
+/* //////////////////////////////////// */
+
+body {
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    /*color: #484652;*/
+}
+
+.wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+[class*="__container"] {
+    max-width: 1087px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (max-width: $maxWidthContainer + px) {
+    [class*="__container"] {
+        @include adaptiv-value("max-width", 1087, 320, 0, 1)
+    //    //max-width: calc((1087 - 20) * ((100vw - 330px) / (1087 - 330)))
+    //    //max-width: 970px;
+    }
+    body {
+        //font-size: calc(10px + (16 - 10) * ((100vw - 330px) / (1087 - 330)))
+        @include adaptiv-value("font-size", 16, 320, 10, 1)
+    }
+}
