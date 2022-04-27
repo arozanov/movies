@@ -47,7 +47,7 @@ For Unit-tests just run
 
 `yarn test`
 
-For E2E tests install Cypress for your platform, and run
+For E2E tests install Cypress for your platform, run
 
 `npx cypress open`
 
