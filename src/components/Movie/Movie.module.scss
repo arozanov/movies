@@ -11,21 +11,13 @@
 }
 
 .movie__image__wrapper {
-  //position: relative;
-  //height: 0;
-  //padding-top: calc(330 / 220 * 100%);
   width:220px;
   height: 330px;
 }
 
 .movie__image {
-  //position: absolute;
-  //top: 0;
-  //left: 0;
-  //max-width: 100%;
-  //height: auto;
-  border-radius: 15px;
-  padding: 4px;
+  border-radius: 5px;
+  padding: 2px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
   width:220px;
   height: 330px;
