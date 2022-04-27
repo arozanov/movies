@@ -52,12 +52,14 @@ function Movie({movie}) {
 
     return (
         <div className={styles.movie}>
-            <img
-                src={movie.poster_path ? `${POSTER_URL}${movie.poster_path}` : placeholder}
-                alt={movie.title}
-                className={styles.movie__image}
-                loading="lazy"
-            />
+            <div className={styles.movie__image__wrapper}>
+                <img
+                    src={movie.poster_path ? `${POSTER_URL}${movie.poster_path}` : placeholder}
+                    alt={movie.title}
+                    className={styles.movie__image}
+                    loading="lazy"
+                />
+            </div>
             <div className={styles.movie__description}>
                 <div className={styles.header__wrapper}>
                     <div className={styles.header__icons}>

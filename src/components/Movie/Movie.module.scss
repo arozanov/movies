@@ -10,7 +10,20 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.movie__image__wrapper {
+  //position: relative;
+  //height: 0;
+  //padding-top: calc(330 / 220 * 100%);
+  width:220px;
+  height: 330px;
+}
+
 .movie__image {
+  //position: absolute;
+  //top: 0;
+  //left: 0;
+  //max-width: 100%;
+  //height: auto;
   border-radius: 15px;
   padding: 4px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
@@ -56,11 +69,15 @@
 
 @media (max-width: $desktop-width + px) {
   .movie__image {
-    @include adaptiv-value("width", 220, 320, 110, 1);
-    @include adaptiv-value("height", 330, 320, 165, 1);
+    @include adaptiv-value("width", 220, 320, 118.6, 1);
+    @include adaptiv-value("height", 330, 320, 178, 1);
+  }
+
+  .movie__image__wrapper {
+    @include adaptiv-value("width", 220, 320, 118.6, 1);
+    @include adaptiv-value("height", 330, 320, 178, 1);
   }
   .movie__overview {
     @include adaptiv-value("max-height", 330, 320, 142, 1);
-
   }
 }

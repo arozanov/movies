@@ -8,7 +8,7 @@ import {debounce} from "@/components/MoviesList/utils/debouncer";
 
 function useGetMovies(input) {
     const [state, dispatch] = useReducer(reducer, initialState);
-    const getDebouncedMovies = useCallback(debounce(getMovies, 600), []);
+    const getDebouncedMovies = useCallback(debounce(getMovies, 600), [input]);
 
     useEffect(() => {
         if (!input) {
