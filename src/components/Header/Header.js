@@ -24,7 +24,7 @@ function Header() {
                         <NavLink
                             style={setMenuColor}
                             to="/watchLater">
-                        <li className={`${styles.menu__item} ${styles.menu__link}`}>Watch Later</li>
+                            <li className={`${styles.menu__item} ${styles.menu__link}`}>Watch Later</li>
                         </NavLink>
                     </ul>
                 </nav>
@@ -33,7 +33,7 @@ function Header() {
     );
 }
 
-function setMenuColor({ isActive })  {
+function setMenuColor({isActive}) {
     return {
         color: isActive ? "black" : "grey",
     };

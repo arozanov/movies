@@ -34,7 +34,6 @@ export function setLoading(loading) {
             isLoading: loading,
             isError: false,
         }
-
     }
 }
 

@@ -3,7 +3,7 @@ export const WATCH_LATER = 'WATCH_LATER';
 
 export const store = {}
 
-export function setStoreMovie(key, movie, local = undefined) {
+export function setStoreMovie(key, movie, local = null) {
     store[key] = {...store[key], [movie.id]: movie}
     if (!local) {
         window.localStorage.setItem(key, JSON.stringify(store[key]))
@@ -31,7 +31,7 @@ export function getLocalMovies(keys) {
 }
 
 export function resetStore() {
-    for(const key in store) {
+    for (const key in store) {
         delete store[key];
     }
 }

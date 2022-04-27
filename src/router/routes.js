@@ -13,4 +13,4 @@ export const routes = [{
 }, {
     path: '/watchLater',
     element: <WatchLater/>,
-}]
+}];

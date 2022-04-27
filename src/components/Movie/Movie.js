@@ -1,4 +1,3 @@
-import {POSTER_URL} from "@/components/Movie/env/config";
 import styles from './Movie.module.scss'
 import {ReactComponent as WatchLater} from "@/assets/icons/watch_later_grey.svg"
 import {ReactComponent as AddFavourites} from "@/assets/icons/add_favourites_grey.svg"
@@ -52,7 +51,7 @@ function Movie({movie}) {
         <div className={styles.movie}>
             <div className={styles.movie__image__wrapper}>
                 <img
-                    src={movie.poster_path ? `${POSTER_URL}${movie.poster_path}` : placeholder}
+                    src={movie.poster_path ? `${process.env.REACT_APP_POSTER_URL}${movie.poster_path}` : placeholder}
                     alt={movie.title}
                     className={styles.movie__image}
                     loading="lazy"

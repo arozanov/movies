@@ -1,7 +1,7 @@
 import {fetcher} from "@/api/interceptors/axios";
 
 function getMovies(query, signal = null) {
-    return fetcher.get(process.env.MOVIES_HOST_URL, {
+    return fetcher.get(process.env.REACT_APP_MOVIES_HOST_URL, {
             params: {
                 query,
             },

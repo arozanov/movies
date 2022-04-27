@@ -1,8 +1,7 @@
 import styles from "./Input.module.scss";
-import {ReactComponent as SearchIcon} from "@/assets/icons/search_icon.svg"
+import {ReactComponent as SearchIcon} from "@/assets/icons/search_icon.svg";
 
 function Input({...props}) {
-
     return (
         <div className={styles.movies__search__container}>
             <div className={styles.search}>

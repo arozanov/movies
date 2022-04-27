@@ -12,7 +12,7 @@ import {Loader} from "@/components/Loader";
 function App() {
     return (
         <div className={styles.wrapper}>
-            <ToastContainer />
+            <ToastContainer/>
             <Router>
                 <Header/>
                 <Suspense fallback={<SuspenseFallback/>}>

@@ -1,9 +1,8 @@
 import {MoviesList} from "@/components/MoviesList";
 import {getLocalMovies} from "@/store/moviesStore/moviesStore";
-import styles from "./favourites.module.scss"
+import styles from "./favourites.module.scss";
 
 function Favourites() {
-
     let {FAVOURITES: movies} = getLocalMovies(["FAVOURITES"]);
     movies = movies ? Object.values(movies) : null;
 

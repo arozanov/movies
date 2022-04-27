@@ -2,7 +2,6 @@ import {Movie} from "@/components/Movie";
 import styles from "./MoviesList.module.scss"
 
 function MoviesList({movies}) {
-
     return (
         <div>
             {movies ? movies.map((movie) => {
