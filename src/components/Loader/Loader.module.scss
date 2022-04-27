@@ -1,11 +1,12 @@
-.loader__container{
-  display: flex;
+.loader__container {
+  max-width: 1087px;
+  margin: 30vh auto 0;
+  padding: 0 20px;
   text-align: center;
-  margin: auto;
-  justify-content: center;
-  align-items: stretch;
 }
 
 .loader__wrapper {
-  height: 100%;
+  svg {
+    width: 30px;
+  }
 }

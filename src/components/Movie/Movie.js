@@ -27,7 +27,6 @@ function Movie({movie}) {
 
     function handleWatchLater() {
         if (watchLater) {
-            console.log('deleted')
             deleteStoreMovie(WATCH_LATER, movie)
             setWatchLater(false);
             toast('🦄 Removed from Watch Later list :)', toastOptions);

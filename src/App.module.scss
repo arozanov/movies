@@ -59,12 +59,8 @@ body {
 
 @media (max-width: $maxWidthContainer + px) {
     [class*="__container"] {
-        @include adaptiv-value("max-width", 1087, 320, 0, 1)
-    //    //max-width: calc((1087 - 20) * ((100vw - 330px) / (1087 - 330)))
-    //    //max-width: 970px;
     }
     body {
-        //font-size: calc(10px + (16 - 10) * ((100vw - 330px) / (1087 - 330)))
         @include adaptiv-value("font-size", 16, 320, 10, 1)
     }
 }

@@ -52,7 +52,7 @@ const state = {
 
 describe('working with reducer store', () => {
     test('set movies', () => {
-        expect(reducer(state, setMovies(movies)).moviesList).toBe(movies);
+        expect(reducer(state, setMovies(movies)).moviesList).toEqual(movies);
         expect(reducer(state, setMovies(movies)).isLoading).toBe(false);
         expect(reducer(state, setMovies(movies)).isError).toBe(false);
     });

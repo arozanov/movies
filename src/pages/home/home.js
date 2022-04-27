@@ -15,30 +15,23 @@ function Home() {
 
     if (isError) {
         return (
-            <div className={styles.error__container}>Error</div>
-        )
+            <>
+                <div className={styles.movies}>
+                    <div className={styles.movies__container}>
+                        <Input value={input} onChange={handleInput}/>
+                    </div>
+                </div>
+                <div className={styles.error__container}>Error</div>
+            </>
+        );
     }
 
     return (
         <div className={styles.movies}>
             <div className={styles.movies__container}>
-                <div className={styles.movies__search}>
-                    <Input
-                        type="text"
-                        placeholder="Find Movies"
-                        autoFocus=""
-                        autoCapitalize="off"
-                        autoCorrect="off"
-                        autoComplete="off"
-                        value={input}
-                        loading="lazy"
-                        onChange={handleInput}
-                    />
-                </div>
-                {!isLoading && <MoviesList movies={moviesList}/>}
+                <Input value={input} onChange={handleInput}/>
+                {isLoading ? <Loader/> : <MoviesList movies={moviesList}/>}
             </div>
-            <Loader loading={true}/>
-
         </div>
     );
 }

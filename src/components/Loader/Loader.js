@@ -1,12 +1,11 @@
-import styles from './Loader.module.scss'
-import {PuffLoader} from "react-spinners";
+import styles from './Loader.module.scss';
+import {LoaderIcon} from "@/components/Loader/LoaderIcon";
 
-function Loader({loading}) {
+function Loader() {
     return (
         <div className={styles.loader__container}>
             <div className={styles.loader__wrapper}>
-                {/*loader*/}
-                <PuffLoader color="grey" loading={loading} size={50}/>
+                <LoaderIcon/>
             </div>
         </div>
     )

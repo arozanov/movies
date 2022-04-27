@@ -2,12 +2,12 @@ import {BrowserRouter as Router} from "react-router-dom";
 import {Suspense} from 'react';
 import {InternalRouter} from "@/router/router";
 import {ErrorBoundary} from "@/components/ErrorBoundary";
-import {Loader} from "@/components/Loader";
 import styles from './App.module.scss';
 import {Header} from "@/components/Header";
 import {getLocalMovies} from "@/store/moviesStore/moviesStore";
 import {Footer} from "@/components/Footer";
 import {ToastContainer} from "react-toastify";
+import {Loader} from "@/components/Loader";
 
 function App() {
     return (
