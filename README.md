@@ -26,12 +26,12 @@ YouTube.
 First, you will need API key for [https://themoviedb.org](https://themoviedb.org).
 Then. clone the project, create file `.env.local` in the root and fill it out with:
 
-`
+```
 REACT_APP_MOVIES_HOST=https://api.themoviedb.org
 REACT_APP_MOVIES_HOST_URL=/3/search/movie
 REACT_APP_POSTER_URL=https://www.themoviedb.org/t/p/w220_and_h330_face
 REACT_APP_API_KEY=********HERE YOUR API KEY********
-`
+```
 
 then just run 
 
