@@ -18,8 +18,6 @@ const toastOptions = {
     progress: undefined,
 }
 
-
-
 function Movie({movie}) {
 
     const [watchLater, setWatchLater] = useState(getStoreMovie(WATCH_LATER, movie))
@@ -64,19 +62,17 @@ function Movie({movie}) {
                 <div className={styles.header__wrapper}>
                     <div className={styles.header__icons}>
                         <Icon Icon={WatchLater} active={watchLater} handleToggle={handleWatchLater}/>
-                        <Icon Icon={AddFavourites} active={favourite} handleToggle={handleFavourite}/>
+                        <Icon Icon={AddFavourites} active={favourite} handleToggle={handleFavourite}
+                              data-test="favourite-button"/>
                     </div>
                     <div className={styles.movie__title__header}>{movie.title}
                     </div>
                 </div>
-
                 <div className={styles.movie__overview}>
                     {movie.overview}
                 </div>
             </div>
-
         </div>
-
     )
 }
 

@@ -16,6 +16,7 @@ function Input({...props}) {
                                    autoCapitalize="off"
                                    autoCorrect="off"
                                    autoComplete="off"
+                                   data-test="search-input"
                             />
                         </div>
                     </form>
